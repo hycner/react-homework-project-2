@@ -1,3 +1,4 @@
+//@flow
 import carrierData from './_carrierData';
 
 export function getCarrierName (abbr: string): string {

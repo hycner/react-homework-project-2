@@ -1,3 +1,5 @@
+// grabbed from https://www.airfarewatchdog.com/pages/3799702/airline-letter-codes/
+
 export default {
   "6A":	"AVIACSA",
   "9K":	"Cape Air",
