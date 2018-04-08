@@ -13,7 +13,7 @@ export type TFlight = {
 
 export type TStateFlights = TFlight[];
 
-const initialState: TStateFlights = [];
+export const initialState: TStateFlights = [];
 
 export default (state: TStateFlights = initialState, action: TAction): TStateFlights => {
   switch (action.type) {
