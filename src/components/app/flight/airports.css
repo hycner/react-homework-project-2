@@ -1,0 +1,11 @@
+.airports {
+  display: flex;
+}
+
+.airport {
+  width: 50%;
+}
+
+.airport-name {
+  font-size: 80px;
+}

@@ -1,7 +1,7 @@
 // @flow
 import {combineReducers} from 'redux';
 
-import type {TStateFlights} from "./flights";
+import type {TStateFlights} from './flights';
 import flights from './flights';
 
 export default combineReducers({
@@ -9,5 +9,5 @@ export default combineReducers({
 });
 
 export type TState = {
-  flights: TStateFlights
+  flights: TStateFlights,
 };

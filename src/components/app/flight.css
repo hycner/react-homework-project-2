@@ -1,1 +1,6 @@
-
+.flight {
+  display: flex;
+  margin: 20px;
+  border: 1px solid black;
+  background-color: #cee0f0;
+}

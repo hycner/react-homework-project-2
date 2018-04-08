@@ -1,10 +1,11 @@
 //@flow
 import carrierData from './_carrierData';
+import logo from './logo.png';
 
 export function getCarrierName(abbr: string): string {
-  return carrierData[abbr];
+  return carrierData[abbr] || abbr;
 }
 
 export function getCarrierIcon(abbr: string): string {
-  return `${abbr}.png`;
+  return `${logo}?airline=${abbr}`;
 }
