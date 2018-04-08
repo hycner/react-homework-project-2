@@ -1,3 +1,6 @@
+.carrier {
+  text-align: center; }
+
 .carrier-img {
   margin: 20px 20px 0 20px;
   border: 1px solid black;
@@ -6,5 +9,4 @@
 
 .carrier-name {
   margin: 10px 0;
-  font-size: 18px;
-  text-align: center; }
+  font-size: 18px; }

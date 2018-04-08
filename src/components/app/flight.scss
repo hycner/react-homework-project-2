@@ -1,6 +1,11 @@
 .flight {
   display: flex;
+  flex-direction: column;
   margin: 20px;
   border: 1px solid black;
   background-color: #cee0f0;
+
+  @media (min-width: 575px) {
+    flex-direction: row;
+  }
 }
