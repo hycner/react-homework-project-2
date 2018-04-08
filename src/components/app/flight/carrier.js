@@ -17,11 +17,7 @@ export default class Carrier extends PureComponent<TProps> {
 
     return (
       <div className="carrier">
-        <img
-          src={icon}
-          alt={flight.carrier}
-          className="carrier-img"
-        />
+        <img src={icon} alt={flight.carrier} className="carrier-img" />
         <div className="carrier-name">{name}</div>
       </div>
     );

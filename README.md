@@ -1,5 +1,10 @@
 # react-test
 
+## notes
+- Used create-react-app as starter
+- Added flow, prettier, sass
+- Flight data hardcoded in redux action
+
 ## instructions
 Write a React component that renders a list of flights (static data, - source, destination, departure time, arrival time, carrier and carrier icon)
 Each row should look like this: https://i.imgur.com/Lmtkee5.png .  

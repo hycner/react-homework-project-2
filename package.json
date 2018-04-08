@@ -27,7 +27,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "format": "prettier --write \"src/**/*.{js,jsx}\" --print-width 100 --single-quote --trailing-comma es5 --no-bracket-spacing",
-    "format:dry": "prettier -l \"src/**/*.{js,jsx}\" --print-width 100 --single-quote --trailing-comma es5 --no-bracket-spacing"
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "format:dry": "prettier -l \"src/**/*.{js,jsx}\""
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
