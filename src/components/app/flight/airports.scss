@@ -1,20 +1,24 @@
 .airports {
   display: flex;
-  width: 100%; }
+  width: 100%;
+}
 
 .airport {
   display: flex;
   flex-direction: column;
-  width: 50%; }
+  width: 50%;
+}
 
 .airport-name {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 80px; }
+  font-size: 80px;
+}
 
 .airport-date {
   margin-bottom: 5px;
   text-align: center;
-  font-size: 18px; }
+  font-size: 18px;
+}

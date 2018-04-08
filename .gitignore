@@ -8,6 +8,10 @@
 
 # production
 /build
+/src/**/*.css
+
+# editors
+.idea
 
 # misc
 .DS_Store
