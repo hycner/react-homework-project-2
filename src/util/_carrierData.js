@@ -1,6 +1,7 @@
+// @flow
 // grabbed from https://www.airfarewatchdog.com/pages/3799702/airline-letter-codes/
 
-export default {
+let carrierData = {
   '6A': 'AVIACSA',
   '9K': 'Cape Air',
   A0: "L'Avion",
@@ -97,3 +98,5 @@ export default {
   YX: 'Midwest',
   ZK: 'Great Lakes',
 };
+
+export default carrierData;

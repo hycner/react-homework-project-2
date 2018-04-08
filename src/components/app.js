@@ -1,24 +1,34 @@
-import React, {Component} from 'react';
+// @flow
+import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 
+import type {TState} from "../reducers";
+import type {TStateFlights} from "../reducers/flights";
 import {dispatch} from '../store';
 import {getFlights} from '../actions/flights';
 
+import Flight from './app/flight';
 import './app.css';
 
-class App extends Component {
+type TProps = {
+  flights: TStateFlights
+};
+
+class App extends PureComponent<TProps> {
   componentDidMount() {
     setTimeout(() => dispatch(getFlights()), 5000);
   }
 
   render() {
-    console.log('** this.props', this.props);
-
-    return <div className="App">blah</div>;
+    return (
+      <div className="app">
+        {this.props.flights.map((x, i) => <Flight flight={x} key={i} />)}
+      </div>
+    );
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state: TState) {
   return {
     flights: state.flights,
   };
