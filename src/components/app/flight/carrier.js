@@ -11,14 +11,18 @@ type TProps = {
 
 export default class Carrier extends PureComponent<TProps> {
   render() {
+    let {flight} = this.props;
+    let name = getCarrierName(flight.carrier);
+    let icon = getCarrierIcon(flight.carrier);
+
     return (
       <div className="carrier">
         <img
-          src={getCarrierIcon(this.props.flight.carrier)}
-          alt={this.props.flight.carrier}
+          src={icon}
+          alt={flight.carrier}
           className="carrier-img"
         />
-        <div className="carrier-name">{getCarrierName(this.props.flight.carrier)}</div>
+        <div className="carrier-name">{name}</div>
       </div>
     );
   }
