@@ -18,13 +18,21 @@ export default class Airports extends PureComponent<TProps> {
     return (
       <div className="airports">
         <div className="airport">
-          <div className="airport-name">{flight.origin}</div>
-          <div>{departure}</div>
+          <div className="airport-name">
+            {flight.origin}
+          </div>
+          <div className="airport-date">
+            {departure}
+          </div>
         </div>
 
         <div className="airport">
-          <div className="airport-name">{flight.destination}</div>
-          <div>{arrival}</div>
+          <div className="airport-name">
+            {flight.destination}
+          </div>
+          <div className="airport-date">
+            {arrival}
+          </div>
         </div>
       </div>
     );
