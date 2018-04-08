@@ -21,7 +21,11 @@ class App extends PureComponent<TProps> {
 
   render() {
     return (
-      <div className="app">{this.props.flights.map((x, i) => <Flight flight={x} key={i} />)}</div>
+      <div className="app">
+        {this.props.flights.map((x, i) => {
+          return <Flight flight={x} key={i} />;
+        })}
+      </div>
     );
   }
 }
