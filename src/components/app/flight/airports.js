@@ -1,12 +1,43 @@
 // @flow
 import React, {PureComponent} from 'react';
+import styled from 'styled-components';
 
 import type {TFlight} from '../../../reducers/flights';
-import './airports.css';
 
 type TProps = {
   flight: TFlight,
 };
+
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 575px) {
+    flex-direction: row;
+  }
+`;
+const Airport = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 575px) {
+    width: 50%;
+  }
+`;
+const Name = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 80px;
+`;
+const Time = styled.div`
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 18px;
+`;
 
 export default class Airports extends PureComponent<TProps> {
   render() {
@@ -16,17 +47,17 @@ export default class Airports extends PureComponent<TProps> {
     let arrival = new Date(flight.arrivalTime).toLocaleString();
 
     return (
-      <div className="airports">
-        <div className="airport">
-          <div className="airport-name">{flight.origin}</div>
-          <div className="airport-date">{departure}</div>
-        </div>
+      <Wrap>
+        <Airport>
+          <Name>{flight.origin}</Name>
+          <Time>{departure}</Time>
+        </Airport>
 
-        <div className="airport">
-          <div className="airport-name">{flight.destination}</div>
-          <div className="airport-date">{arrival}</div>
-        </div>
-      </div>
+        <Airport>
+          <Name>{flight.destination}</Name>
+          <Time>{arrival}</Time>
+        </Airport>
+      </Wrap>
     );
   }
 }

@@ -8,7 +8,6 @@ import {dispatch} from '../store';
 import {getFlights} from '../actions/flights';
 
 import Flight from './app/flight';
-import './app.css';
 
 type TProps = {
   flights: TStateFlights,
@@ -16,12 +15,12 @@ type TProps = {
 
 class App extends PureComponent<TProps> {
   componentDidMount() {
-    setTimeout(() => dispatch(getFlights()), 1000);
+    dispatch(getFlights());
   }
 
   render() {
     return (
-      <div className="app">
+      <div>
         {this.props.flights.map((x, i) => {
           return <Flight flight={x} key={i} />;
         })}
